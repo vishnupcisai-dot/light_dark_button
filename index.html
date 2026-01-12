@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        button{
+            margin: 0;
+            padding: 0;
+        }
+        #text1{
+         color: rgb(0, 0, 0);
+         text-align: center;
+         padding-top: 21px;
+         font-size: 4em;
+         background-color: rgb(235, 228, 228);
+        }
+        #button1{
+            background-color: rgb(255, 255, 255);
+        }
+        #button2{
+            background-color: rgb(10, 10, 10);
+            color: white;
+        }
+        button{
+            position: relative;
+            padding: 5px 12px;
+            border-radius: 12px;
+            font-size: 2.2em;
+            margin-top: 12px;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            font-size: 12px;
+            display: grid;
+           align-content: center;
+            justify-content: center;
+        }
+        .cntr{
+            width: 50%;
+            height: 70vh;
+            top: 0;
+            background-color: gray;
+            
+        }
+        @media(max-width: 700px){
+            body{
+                font-size: 7px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="text1">click to the button and check what type the screen mode </h1>
+
+    <button id="button1">Dark</button>
+    <button id="button2">light</button>
+    <script>
+        document.getElementById('button1').onclick = function(){
+         document.getElementById("text1").style.backgroundColor = "black";
+         document.getElementById("text1").innerText = "Dark mode Now !!"
+         document.body.style.backgroundColor = 'black';
+         document.getElementById('button1').style.backgroundColor = "black";
+          document.getElementById('button2').style.backgroundColor = "white";
+           document.getElementById('button2').style.color = "black";
+         document.getElementById('button1').style.color = "white";
+          document.getElementById("text1").style.color = "white"; 
+
+           
+        }
+         document.getElementById('button2').onclick = function(){
+             document.getElementById("text1").innerText = "Light mode Now !!"
+           document.getElementById('text1').style.backgroundColor = "white";
+           document.getElementById('button2').style.backgroundColor = "white";
+ document.body.style.backgroundColor = 'white';
+           document.getElementById('text1').style.color = "black";
+        }  
+    </script>
+</body>
+</html>
